@@ -1,8 +1,11 @@
-#Install requirements
+# 注意 / Note
+設定エリアにあなたのIDとパスワードを入力してください / Please enter your ID and password in the settings area.
+
+## 必要なモノたち / Install requirements
 ```cmd
 pip3 install  requirements.txt
 ```
-#Run
+## 実行 / Run
 ```cmd
 python3 ymobile_fetcher.py
             
