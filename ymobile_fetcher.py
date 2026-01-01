@@ -203,7 +203,7 @@ def main():
     """スタンドアロン実行用"""
     
     # 認証情報チェック
-    if YMOBILE_PASSWORD == "your_password_here":
+    if YMOBILE_PASSWORD == ["YOUR_PASSWORD", "your_password_here"]:
         print("=" * 60)
         print("❌ エラー: パスワードが設定されていません")
         print("=" * 60)
