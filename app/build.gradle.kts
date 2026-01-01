@@ -20,10 +20,20 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("release.keystore")
+            storePassword = System.getenv("SIGNING_STORE_PASSWORD") ?: "ym-!appv8"
+            keyAlias = System.getenv("SIGNING_KEY_ALIAS") ?: "release"
+            keyPassword = System.getenv("SIGNING_KEY_PASSWORD") ?: "ym-!appv8"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
