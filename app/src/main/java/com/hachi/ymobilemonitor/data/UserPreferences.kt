@@ -13,8 +13,8 @@ class UserPreferences(context: Context) {
         context,
         "secret_shared_prefs",
         masterKey,
-        EncryptedSharedPreferences.PrefKey.ENC_AES256_SIV,
-        EncryptedSharedPreferences.PrefValue.ENC_AES256_GCM
+        EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+        EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
     )
 
     companion object {
