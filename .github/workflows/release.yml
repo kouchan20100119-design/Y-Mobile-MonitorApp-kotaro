@@ -27,7 +27,7 @@ jobs:
         run: |
           if [ ! -f gradlew ]; then
             echo "gradlew not found. Generating Gradle wrapper..."
-            gradle wrapper
+            gradle wrapper --gradle-version 8.2
           fi
           chmod +x gradlew
 
